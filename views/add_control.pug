@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    h1|Ohjauspaneeli
+
+    div.ohjaus
+        form(action="return createOutput();")
+        <h3>Create New Output</h3>
+        form(method='POST', action='/controls/add')
+            #form-group
+            label Name:
+            input.form-control(name='name', type='text')
+            #form-group
+            label Board ID:
+            input.form-control(name='id', type='text')
+            #form-group
+            label GPIO number:
+            input.form-control(name='gpio',type='text')
+            #form-group
+            label Initial GPIO state:
+            input.form-control(name='state',type='text')
+            br
+            input.btn.btn-primary(type='submit',value='Submit')
+            p Note: in some devices, you might need to refresh the page to see your newly created buttons or to remove deleted buttons.

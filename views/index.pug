@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  div.charts
+    h1 #{title}
+    div.doggo
+      img(src="images/nabe.jpg", alt="", width="200px", height="200px")
+      img(src="images/nabe2.jpg", alt="", width="250px", height="200px")
+      img(src="images/nabe3.jpg", alt="", width="250px", height="200px")
+    if user 
+      h2|Kirjauduit sisään onnistuneesti!

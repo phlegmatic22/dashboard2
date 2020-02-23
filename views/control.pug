@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    h1|Ohjauspaneeli
+
+
+    ul.list-group
+        table(style='width:100%', border='4', class='table-striped')
+            tr
+                th(class="text-center" ) Id
+                th(class="text-center") Name
+                th(class="text-center") GPIO
+                th(class="text-center") Status
+                each control, i in controls
+                    tr
+                        td 
+                            input(type="text", value=control.id)
+                        td
+                            input(type="text", value=control.name)
+                        td 
+                            input(type="text", value=control.gpio)
+                        td 
+                            input(type="text", value=control.state)
+                        td 
+                            form(method='POST', action='/controls/add')
+                                input.btn.btn-primary(type='submit',value='Update')
+                        td 
+                            form(method='DELETE', action='/controls/delete')
+                                input.btn.btn-primary(type='submit',value='Delete')
+                        
+    
+    a(href="controls/add_control") Add new control
