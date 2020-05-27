@@ -6,9 +6,9 @@ $(document).ready(function () {
     });
 });
 
-function fetchdata(p) {
+function fetchdata() {
     var d = document.getElementsByName("nappi")[0].value;
-    $.get("/datas/fetch/number/" + p, function (data, status) {
+    $.get("/datas/fetch/number/" + d, function (data, status) {
         graph(data, x);
         x = true;
     });
