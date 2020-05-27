@@ -1,9 +1,33 @@
 $(document).ready(function(){
     $.get("/data/fetch", function(data, status){
         graph(data);
+        resizeCanvasToDisplaySize(document.getElementById('myChart'));
       });
 
 });
+
+function resize() {
+    var canvas = document.getElementById('myChart');
+    alert(window.innerWidth)
+
+    canvas.width = 700;
+    canvas.height = 500;
+
+}
+function resizeCanvasToDisplaySize(canvas) {
+    // look up the size the canvas is being displayed
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+ 
+    // If it's resolution does not match change it
+    if (canvas.width !== width || canvas.height !== height) {
+      canvas.width = width;
+      canvas.height = height;
+      return true;
+    }
+ 
+    return false;
+ }
 
 function graph(data) {
     var valuesTemperature = [];
@@ -17,6 +41,7 @@ function graph(data) {
     var values = [valuesTemperature, valuesHumidity, valuesIrrigationlevel];
     // jQuery methods go here...
     var ctx = document.getElementById('myChart').getContext('2d');
+    
     var ctx2 = document.getElementById('myChart2').getContext('2d');
     var ctx3 = document.getElementById('myChart3').getContext('2d');
     

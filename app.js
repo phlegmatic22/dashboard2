@@ -100,6 +100,6 @@ app.use('/users', users);
 app.use('/controls', controls);
 app.use('/data', data);
 // Start Server
-app.listen(3005, function(){
+app.listen(80, function(){
   console.log('Server started on port 80...');
 });
