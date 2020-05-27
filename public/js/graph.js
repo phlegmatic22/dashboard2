@@ -1,12 +1,7 @@
 $(document).ready(function(){
     $.get("/data/fetch", function(data, status){
-        //alert("Data: " + JSON.stringify(data) + "\nStatus: " + status);
-
-        
         graph(data);
       });
-      
-    
 
 });
 

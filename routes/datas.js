@@ -16,6 +16,7 @@ router.get('/', function(req, res){
             title:'Data',
             data: data
           });
+          console.log(data)
         }
       });
 });

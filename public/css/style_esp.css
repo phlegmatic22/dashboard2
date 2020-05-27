@@ -14,18 +14,18 @@ body {
   padding-bottom: 25px;
 } */
 
-.switch {
+/* .switch {
   position: relative;
   display: inline-block;
   width: 120px;
   height: 68px;
-}
+} */
 
 .switch input {
   display: none
 }
 
-.slider {
+/* .slider {
   position: absolute;
   top: 0;
   left: 0;
@@ -33,9 +33,9 @@ body {
   bottom: 0;
   background-color: #949494;
   border-radius: 34px;
-}
+} */
 
-.slider:before {
+/* .slider:before {
   position: absolute;
   content: "";
   height: 52px;
@@ -45,17 +45,17 @@ body {
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 68px;
-}
+} */
 
-input:checked+.slider {
+/* input:checked+.slider {
   background-color: #008B74;
-}
+} */
 
-input:checked+.slider:before {
+/* input:checked+.slider:before {
   -webkit-transform: translateX(52px);
   -ms-transform: translateX(52px);
   transform: translateX(52px);
-}
+} */
 
 input[type=text], input[type=number], select {
   width: 100%;
@@ -84,9 +84,9 @@ input[type=submit]:hover {
   background-color: #005a4c;
 }
 
-.dawg{
+/* .dawg{
   text-align: center;
-}
+} */
 
 /* div {
   text-align: left;
@@ -99,19 +99,19 @@ input[type=submit]:hover {
   margin: auto;
   text-align: center;
 }
-.chart-container-left {
+.chart {
   position: relative;
   margin: auto;
   height: 30vh;
   width: 40vw;
 }
-.chart-container-right {
+/* .chart-container-right {
   position: relative;
   margin: auto;
   height: 30vh;
   width: 40vw;
   float: right;
-}
+} */
 
 body {  
   background: rgb(255, 255, 255);
@@ -120,4 +120,5 @@ body {
 
 canvas {
   border: 1px dotted rgb(0, 0, 0);
+  margin: auto;
 }

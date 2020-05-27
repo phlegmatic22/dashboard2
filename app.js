@@ -91,11 +91,11 @@ app.get('/', function(req, res){
 
 
 // Route Files
-let articles = require('./routes/articles');
+
 let users = require('./routes/users');
 let controls = require('./routes/controls');
-let data = require('./routes/data');
-app.use('/articles', articles);
+let data = require('./routes/datas');
+
 app.use('/users', users);
 app.use('/controls', controls);
 app.use('/data', data);

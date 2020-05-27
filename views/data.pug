@@ -9,15 +9,14 @@ block content
             img(src="images/nabe5.jpg", alt="", width="200px", height="200px")
             img(src="images/nabe6.jpg", alt="", width="200px", height="200px")
         if user 
-            .chart-container-row1
-                .chart-container-left
-                    canvas#myChart(height="500" width="700")
-                    br
-                    br
-                    canvas#myChart2(height="500" width="700")
-                    br
-                    br
-                    canvas#myChart3(height="500" width="700")
+            .chart
+                canvas#myChart(height="500" width="700")
+                br
+                br
+                canvas#myChart2(height="500" width="700")
+                br
+                br
+                canvas#myChart3(height="500" width="700")
             script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js')
             script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js')
             script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
