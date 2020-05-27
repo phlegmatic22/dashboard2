@@ -1,23 +1,10 @@
 $(document).ready(function(){
     $.get("/data/fetch", function(data, status){
         graph(data);
-        resize();
       });
 
 });
 
-function resize() {
-    var canvas = document.getElementById('myChart');
-    //alert(canvas.)
-    if (canvas.width  < window.innerWidth)
-    {
-        //canvas.width  = window.innerWidth / 2;
-        //canvas.height  = window.innerHeight / 2;
-        //alert('dawg')
-    }
-
-    //alert(canvas2.width)
-}
 
 
 function graph(data) {
@@ -32,11 +19,17 @@ function graph(data) {
     var values = [valuesTemperature, valuesHumidity, valuesIrrigationlevel];
     // jQuery methods go here...
     var ctx = document.getElementById('myChart').getContext('2d');
-    
     var ctx2 = document.getElementById('myChart2').getContext('2d');
     var ctx3 = document.getElementById('myChart3').getContext('2d');
     
     var ctxList = [ctx, ctx2, ctx3];
+    ctxList.forEach(c => {
+        if(window.innerWidth < window.innerHeight){
+            //phone
+            c.canvas.parentNode.style.height = '128px';
+            c.canvas.parentNode.style.width = '128px';
+        }
+    });
     var titles = ['Lämpötila (C)', 'Huoneilman kosteus (%)', 'Kasvin mullan kosteus'];
     var colors = ['red', 'blue', 'green'];
 
@@ -53,7 +46,7 @@ function graph(data) {
             },
             options:{
                 maintainAspectRatio:false,
-                responsive:false,	
+                responsive:true,	
                 scales:{
                     xAxes:[{
                         type:"time",
