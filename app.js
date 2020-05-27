@@ -94,12 +94,12 @@ app.get('/', function(req, res){
 
 let users = require('./routes/users');
 let controls = require('./routes/controls');
-let data = require('./routes/datas');
+let datas = require('./routes/datas');
 
 app.use('/users', users);
 app.use('/controls', controls);
-app.use('/data', data);
+app.use('/datas', datas);
 // Start Server
-app.listen(80, function(){
+app.listen(3005, function(){
   console.log('Server started on port 80...');
 });
