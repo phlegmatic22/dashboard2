@@ -26,8 +26,8 @@ function graph(data) {
     ctxList.forEach(c => {
         if(window.innerWidth < window.innerHeight){
             //phone
-            c.canvas.parentNode.style.height = '128px';
-            c.canvas.parentNode.style.width = '128px';
+            c.canvas.parentNode.style.height = '50vh';
+            c.canvas.parentNode.style.width = '90vh';
         }
     });
     var titles = ['Lämpötila (C)', 'Huoneilman kosteus (%)', 'Kasvin mullan kosteus'];
