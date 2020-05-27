@@ -1,33 +1,24 @@
 $(document).ready(function(){
     $.get("/data/fetch", function(data, status){
         graph(data);
-        resizeCanvasToDisplaySize(document.getElementById('myChart'));
+        resize();
       });
 
 });
 
 function resize() {
     var canvas = document.getElementById('myChart');
-    alert(window.innerWidth)
-
-    canvas.width = 700;
-    canvas.height = 500;
-
-}
-function resizeCanvasToDisplaySize(canvas) {
-    // look up the size the canvas is being displayed
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
- 
-    // If it's resolution does not match change it
-    if (canvas.width !== width || canvas.height !== height) {
-      canvas.width = width;
-      canvas.height = height;
-      return true;
+    //alert(canvas.)
+    if (canvas.width  < window.innerWidth)
+    {
+        //canvas.width  = window.innerWidth / 2;
+        //canvas.height  = window.innerHeight / 2;
+        //alert('dawg')
     }
- 
-    return false;
- }
+
+    //alert(canvas2.width)
+}
+
 
 function graph(data) {
     var valuesTemperature = [];
